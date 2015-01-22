@@ -6,7 +6,7 @@ Examples of using [hipertracker:meteor-reactjs](https://github.com/hipertracker/
 ```
 $ git clone https://github.com/hipertracker/meteor-reactjs-examples
 $ cd meteor-reactjs-examples/examples/leaderboard
-$ meteor add hipertracker/meteor-reactjs
+$ meteor add hipertracker:meteor-reactjs
 $ meteor
 ```
 
