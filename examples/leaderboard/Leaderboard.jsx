@@ -62,19 +62,18 @@ var Leaderboard = React.createClass({
             return <span/>;
         }
         var children = [
-            <div className="leaderboard">
+            <div className="leaderboard" key="leaderboard">
                 { this.state.players.map(this.renderPlayer) }
             </div>
         ];
 
         if (this.state.selectedName) {
             children.push(
-                <div className="details">
+                <div className="details" key="details">
                     <div className="name">{this.state.selectedName}</div>
                     <input
                         type="button"
                         value="Give 5 points"
-                        onClick={this.addFivePoints}
                         onClick={this.addFivePoints}
                     />
                 </div>
@@ -82,7 +81,7 @@ var Leaderboard = React.createClass({
 
         } else {
             children.push(
-                <div className="none">Click a player to select</div>
+                <div className="none" key="notice">Click a player to select</div>
             );
         }
 
