@@ -53,7 +53,7 @@ var Leaderboard = React.createClass({
                 score={model.score}
                 className={model._id === _id ? "selected" : ""}
                 onClick={this.selectPlayer.bind(this, model._id)}
-            />
+                />
         )
     },
 
@@ -75,7 +75,7 @@ var Leaderboard = React.createClass({
                         type="button"
                         value="Give 5 points"
                         onClick={this.addFivePoints}
-                    />
+                        />
                 </div>
             );
 
@@ -92,8 +92,7 @@ var Leaderboard = React.createClass({
 Player = React.createClass({
     render() {
         var {name, score, className, ...other} = this.props;
-        var cx = React.addons.classSet;
-        var classes = cx({
+        var classes = classNames({
             player: true,
             selected: className
         });
